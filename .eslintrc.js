@@ -1,14 +1,18 @@
 module.exports = {
 	"root": true,
-	"plugins": ["node"],
+	"plugins": [
+		"prettier",
+		"node"
+	],
 	"extends": ["eslint:recommended", "plugin:node/recommended"],
 	"env": {
 		"node": true,
 		"es6": true,
+		"mocha": true,
 	},
 	"parserOptions": { "ecmaVersion": 2017 },
 	"rules": {
-		"quotes": ["error", "double"],
+		"prettier/prettier": "warn",
 		"no-undef": "error",
 		"no-extra-semi": "error",
 		"semi": "error",
@@ -24,31 +28,14 @@ module.exports = {
 		"no-multiple-empty-lines": "error",
 		"no-multi-spaces": "error",
 		"no-process-exit": "warn",
-		"space-in-parens": "error",
 		"no-trailing-spaces": "error",
 		"no-use-before-define": "off",
 		"no-unused-vars": ["error", { "args": "none" }],
 		"key-spacing": "error",
-		"space-infix-ops": "error",
 		"no-unsafe-negation": "error",
 		"no-loop-func": "warn",
-		"space-before-function-paren": ["error", "never"],
-		"space-before-blocks": "error",
 		"object-curly-spacing": ["error", "always"],
 		"indent": "off",
-		"keyword-spacing": ["error", {
-			"after": false,
-			"overrides": {
-				"const": { "after": true },
-				"try": { "after": true },
-				"else": { "after": true },
-				"throw": { "after": true },
-				"case": { "after": true },
-				"return": { "after": true },
-				"finally": { "after": true },
-				"do": { "after": true }
-			}
-		}],
 		"no-console": "off",
 		"valid-jsdoc": "error",
 		"node/no-unsupported-features": "error",
