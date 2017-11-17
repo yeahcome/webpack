@@ -659,6 +659,15 @@
           "additionalProperties": true,
           "type": "object"
         },
+        "resolve": {
+          "description": "Options for the resolver",
+          "type": "object",
+          "anyOf": [
+            {
+              "$ref": "#/definitions/resolve"
+            }
+          ]
+        },
         "query": {
           "$ref": "#/definitions/ruleSet-query"
         },
